@@ -1,0 +1,820 @@
+mcp | model context protocol
+rag | retrieval augmented generation
+gpt | generative pretrained transformer
+opex | operational expenditure
+trie | prefix tree
+toxico | toxicology
+mom | month over month
+doe | department of energy
+mau | monthly active users
+dphil | doctor of philosophy
+re | regarding
+co | commanding officer
+cogs | cost of goods sold
+abbr | abbreviation
+act | american college testing
+aws sa | amazon web services solutions architect
+adr | alternative dispute resolution
+imf | international monetary fund
+cism | certified information security manager
+edd | doctor of education
+dml | data manipulation language
+vs | versus
+mfa | multi factor authentication
+mbbs | bachelor of medicine and bachelor of surgery
+orm | object relational mapping
+burn | burn rate
+401k | employer sponsored retirement plan
+gre | graduate record examinations
+ira | individual retirement account
+frm | financial risk manager
+runway | months of runway remaining
+phd | doctor of philosophy
+mca | master of computer applications
+meteo | meteorology
+cia | central intelligence agency
+ba | bachelor of arts
+attn | attention
+mrr | monthly recurring revenue
+army | united states army
+loi | letter of intent
+az900 | azure fundamentals
+it | information technology
+sim | simulation
+lt | lieutenant
+dp | dynamic programming
+qs | quick sort
+fbi | federal bureau of investigation
+xo | executive officer
+af | air force
+evol | evolutionary
+pest | political economic social technological
+fomo | fear of missing out
+abs | abstract
+abbrev | abbreviation
+fyi | for your information
+lru | least recently used
+d2c | direct to consumer
+ppe | personal protective equipment
+dag | directed acyclic graph
+mc | marine corps
+mgmt | management
+phil | philosophy
+pcp | primary care physician
+lib | library
+r&d | research and development
+nbd | no big deal
+mil | military
+hhs | department of health and human services
+fcc | federal communications commission
+pt | physical therapy
+usda | united states department of agriculture
+tldr | too long didn't read
+dot | department of transportation
+pq | priority queue
+hud | department of housing and urban development
+bigo | big o notation
+capt | captain
+nosql | not only sql
+atm | at the moment
+ftc | federal trade commission
+g20 | group of twenty
+op cit | in the work cited
+biochem | biochemistry
+ceo | chief executive officer
+qoq | quarter over quarter
+ipo | initial public offering
+asean | association of southeast asian nations
+forex | foreign exchange market
+cont | continue
+cbo | congressional budget office
+bds | bachelor of dental surgery
+gi | gastrointestinal
+hbu | how about you
+ecol | ecology
+ielts | international english language testing system
+elec | electrical
+qrt | quote retweet
+ci/cd | continuous integration and continuous delivery
+hw | homework
+mgr | manager
+ref | reference
+micro | microbiology
+astro | astronomy
+arpu | average revenue per user
+cissp | certified information systems security professional
+ma | master of arts
+osha | occupational safety and health administration
+arb | arbitration
+ap | advanced placement
+spac | special purpose acquisition company
+ind | industrial
+dm | direct message
+mp | military police
+gao | government accountability office
+llm | large lamguage model
+gcp ace | google cloud associate cloud engineer
+aero | aerospace
+gm | gross margin
+rbc | red blood cell
+mech | mechanical
+diff | difference
+hyp | hypothesis
+npo | nothing by mouth
+crm | customer relationship management
+ccpa | california consumer privacy act
+ib | international baccalaureate
+ctrl | control
+msа | master services agreement
+q | queue
+ipr | intellectual property rights
+doj | department of justice
+hct | hematocrit
+intro | introduction
+da | district attorney
+atdd | acceptance test driven development
+ver | verification
+rt | retweet
+tid | three times a day
+bun | blood urea nitrogen
+flotus | first lady of the united states
+adm | admiral
+lis | longest increasing subsequence
+math | mathematics
+ltd | limited
+resp | respiratory
+fdic | federal deposit insurance corporation
+aum | assets under management
+roi | return on investment
+eps | earnings per share
+heap | binary heap
+who | world health organization
+sp | shortest path
+lpn | licensed practical nurse
+qd | once a day
+bsc | bachelor of science
+prn | as needed
+csat | customer satisfaction
+dnp | doctor of nursing practice
+bsa | body surface area
+lw | lurker
+rest | representational state transfer
+pwa | progressive web app
+esg | environmental social governance
+dhs | department of homeland security
+otc | over the counter
+mts | months
+rx | prescription
+toefl | test of english as a foreign language
+nb | note well
+covid | coronavirus disease
+nps | net promoter score
+hiv | human immunodeficiency virus
+fifo | first in first out
+qc | quality control
+rna | ribonucleic acid
+sys | systems
+ftw | for the win
+bp | blood pressure
+qid | four times a day
+pet | positron emission tomography
+gram | grammar
+mou | memorandum of understanding
+lang | language
+ortho | orthopedics
+navy | united states navy
+hist | history
+ekg | electrocardiogram
+yaml | yet another markup language
+a1c | glycated hemoglobin
+aed | automated external defibrillator
+demo | demonstration
+bid | twice a day
+lmk | let me know
+eta | estimated time of arrival
+yoy | year over year
+therm | thermodynamics
+iv | intravenous
+proc | process
+cpr | cardiopulmonary resuscitation
+prob | problem
+er | emergency room
+fr | for real
+usps | united states postal service
+li | linkedin
+hsa | health savings account
+comp sci | computer science
+sci | science
+fig | figure
+minh | min heap
+llc | limited liability company
+exec | executive
+rec | recurrence relation
+val | validation
+arm | adjustable rate mortgage
+excl | excluding
+plc | public limited company
+ltv | lifetime value
+apr | annual percentage rate
+os | operating system
+apy | annual percentage yield
+dns | domain name system
+md | doctor of medicine
+yagni | you aren't gonna need it
+nft | non fungible token
+thes | thesis
+bx | box
+omb | office of management and budget
+incl | including
+eof | end of file
+defi | decentralized finance
+btc | bitcoin
+fx | foreign exchange
+gtg | got to go
+eula | end user license agreement
+wto | world trade organization
+lbo | leveraged buyout
+p/e | price to earnings ratio
+govt | government
+cdc | centers for disease control and prevention
+wpm | words per minute
+faas | function as a service
+struct | structure
+obj | objective
+natl | national
+prof | professor
+sow | statement of work
+tba | to be announced
+prog | program
+m&a | mergers and acquisitions
+rom | read only memory
+dau | daily active users
+rfi | request for information
+wa | whatsapp
+irr | internal rate of return
+ctr | click through rate
+doc | document
+ebitda | earnings before interest taxes depreciation and amortization
+atty | attorney
+etf | exchange traded fund
+hgb | hemoglobin
+me | master of engineering
+min | minimum
+ai | artificial intelligence
+ot | occupational therapy
+irs | internal revenue service
+po | by mouth
+spv | special purpose vehicle
+ppi | producer price index
+eq | equation
+gdp | gross domestic product
+tmi | too much information
+wacc | weighted average cost of capital
+qm | quantum mechanics
+so | stack overflow
+sig | signal
+ui | user interface
+abb | abbreviated
+mat | materials
+qa | quality assurance
+kpi | key performance indicator
+em | electromagnetism
+cardio | cardiology
+cll | circular linked list
+ehr | electronic health record
+corp | corporation
+idk | i don't know
+aids | acquired immunodeficiency syndrome
+op | original poster
+iaas | infrastructure as a service
+tcl | transaction control language
+hipaa | health insurance portability and accountability act
+mod | moderator
+pto | paid time off
+opt | optics
+cvr | conversion rate
+iac | infrastructure as code
+nph | np hard
+tw | twitter
+dir | director
+og | original gangster
+ama | ask me anything
+b2b | business to business
+rb | red black tree
+rfp | request for proposal
+chem eng | chemical engineering
+xml | extensible markup language
+oc | original content
+ip | intellectual property
+bff | best friends forever
+pm | project manager
+inv | invariant
+amort | amortized analysis
+viz | namely
+on2 | quadratic time
+pa | physician assistant
+hdl | high density lipoprotein
+olog | logarithmic time
+bb | branch and bound
+dnd | do not disturb
+ss | selection sort
+capex | capital expenditure
+mtbf | mean time between failures
+fwiw | for what it's worth
+dql | data query language
+yw | you're welcome
+sos | sum over subsets
+b/s | balance sheet
+lca | lowest common ancestor
+rd | reddit
+cna | certified nursing assistant
+lcs | longest common subsequence
+lft | liver function test
+mst | minimum spanning tree
+meas | measurement
+g7 | group of seven
+ops | operations
+def | definition
+llp | limited liability partnership
+sso | single sign on
+sf | special forces
+iama | i am a
+ht | hash table
+nm | net margin
+emr | electronic medical record
+dq | deque
+stk | stack
+dti | debt to income ratio
+dll | doubly linked list
+rsch | research
+max | maximum
+ll | linked list
+ds | data structure
+sll | singly linked list
+gh | github
+otp | one time password
+cpl | corporal
+dry | don't repeat yourself
+hn | hacker news
+dsa | data structures and algorithms
+mba | master of business administration
+ts | topological sort
+dom | document object model
+eu | european union
+cors | cross origin resource sharing
+p&l | profit and loss
+nco | non commissioned officer
+uni | university
+aws | amazon web services
+ft | feature
+ling | linguistics
+bi | business intelligence
+tyvm | thank you very much
+nda | non disclosure agreement
+gcp | google cloud platform
+dr | doctor
+gnp | gross national product
+ec2 | elastic compute cloud
+mvp | minimum viable product
+vp | vice president
+adt | admission discharge transfer
+faq | frequently asked questions
+cd | continuous delivery
+mh | max heap
+collab | collaboration
+yr | year
+thx | thanks
+llb | bachelor of law
+lit review | literature review
+rs | radix sort
+mol | molecular
+fda | food and drug administration
+csr | client side rendering
+defn | definition
+tf | terraform
+svp | senior vice president
+istg | i swear to god
+cfg | context free grammar
+eks | elastic kubernetes service
+dba | doing business as
+tls | transport layer security
+cg | coast guard
+ecg | electrocardiogram
+gf | girlfriend
+fed | federal reserve
+civil | civil engineering
+dfa | deterministic finite automaton
+etc | and so forth
+div | division
+avl | avl tree
+ci | continuous integration
+eos | end of stream
+cpa | certified public accountant
+tos | terms of service
+wip | work in progress
+eth | ethereum
+ent | enterprise
+gsa | general services administration
+prelim | preliminary
+fema | federal emergency management agency
+lgtm | looks good to me
+wfh | work from home
+tdd | test driven development
+saml | security assertion markup language
+solid | single responsibility open closed liskov substitution interface segregation dependency inversion
+gmat | graduate management admission test
+aff | affiliate
+dcl | data control language
+wb | world bank
+ddl | data definition language
+msc | master of science
+sla | service level agreement
+b2c | business to consumer
+dcf | discounted cash flow
+rca | root cause analysis
+ct | computed tomography
+nfa | non deterministic finite automaton
+ml | machine learning
+mttf | mean time to failure
+wasm | webassembly
+geo | geology
+ag | attorney general
+info | information
+scm | source code management
+fin | finance
+smh | shaking my head
+gdpr | general data protection regulation
+sli | service level indicator
+nsa | national security agency
+data wh | data warehouse
+ia | internal assessment
+etl | extract transform load
+2fa | two factor authentication
+bussin | really good
+disc | discord
+hop | hang out please
+chap | chapter
+pls | please
+biophys | biophysics
+oltp | online transaction processing
+rds | relational database service
+rn | registered nurse
+psych | psychiatry
+mvvm | model view viewmodel
+dfs | depth first search
+btwn | between
+nsfw | not safe for work
+mvc | model view controller
+html | hypertext markup language
+bt | binary tree
+dob | date of birth
+dsl | domain specific language
+anthro | anthropology
+spa | single page application
+bts | behind the scenes
+tui | text user interface
+npc | np complete
+sgt | sergeant
+ssl | secure sockets layer
+nlrb | national labor relations board
+vm | virtual machine
+devops | development operations
+nav | net asset value
+exp | expansion
+rl | reinforcement learning
+nn | neural network
+yt | youtube
+arith | arithmetic
+cv | computer vision
+be | bachelor of engineering
+iot | internet of things
+wifi | wireless fidelity
+churn | customer churn rate
+ram | random access memory
+pin | personal identification number
+brics | brazil russia india china south africa
+para | paragraph
+wan | wide area network
+o2n | exponential time
+pvt | private
+nato | north atlantic treaty organization
+pub | publication
+usb | universal serial bus
+rofl | rolling on the floor laughing
+vpotus | vice president of the united states
+cell | cellular
+gpu | graphics processing unit
+cpu | central processing unit
+graphql | graph query language
+chk | check
+ldl | low density lipoprotein
+seo | search engine optimization
+epidem | epidemiology
+id | identification
+cdn | content delivery network
+desc | description
+immunol | immunology
+lms | learning management system
+ux | user experience
+blvd | boulevard
+eli5 | explain like i am 5
+crud | create read update delete
+arr | annual recurring revenue
+gs | greedy algorithm
+et al | and others
+mo | month
+neuro | neuroscience
+css | cascading style sheets
+midterm | mid-semester examination
+proj | project
+http | hypertext transfer protocol
+tel | telephone
+oop | object oriented programming
+cms | content management system
+is | insertion sort
+ide | integrated development environment
+az | azure
+gmbh | gesellschaft mit beschrankter haftung
+ttyl | talk to you later
+fcf | free cash flow
+sry | sorry
+jwt | json web token
+onlogn | linearithmic time
+smb | small and medium business
+gui | graphical user interface
+comp | comparative
+olap | online analytical processing
+swot | strengths weaknesses opportunities threats
+pharm | pharmacology
+ibid | in the same place
+icu | intensive care unit
+jr | junior
+api | application programming interface
+tt | tiktok
+btw | by the way
+hm | hash map
+ssh | secure shell
+sat | scholastic aptitude test
+on | linear time
+wk | week
+alg | algebra
+w | with
+ssd | solid state drive
+til | today i learned
+bmi | body mass index
+oauth | open authorization
+theo | theory
+tech | technology
+rsvp | please respond
+cf | compare with
+potus | president of the united states
+npm | node package manager
+spec | specification
+syllab | syllabus
+supp | supplement
+st | speech therapy
+acr | acronym
+saas | software as a service
+biz | business
+lifo | last in first out
+gr | graph
+stat | statistics
+bc | because
+nvm | never mind
+sql | structured query language
+cpi | consumer price index
+soc | sociology
+erp | enterprise resource planning
+sem | semester
+ngl | not gonna lie
+nat sci | natural science
+esl | english as a second language
+num | number
+fp | functional programming
+cx | customer experience
+abbrs | abbreviations
+no | number
+cli | command line interface
+iirc | if i recall correctly
+gu | genitourinary
+cl | class
+psyd | doctor of psychology
+med | mediation
+troll | internet troll
+cum | cumulative
+acad | academic
+m/c | multiple choice
+xtra | extra
+req | requirement
+mtech | master of technology
+rip | rest in peace
+lsc | legal services corporation
+fn | footnote
+wbc | white blood cell
+ms | master of science
+no cap | no lie / for real
+exam | examination
+eval | evaluation
+educ | education
+tbd | to be determined
+cr | creatinine
+vocab | vocabulary
+lect | lecture
+treas | treasurer
+im | intramuscular
+col | colonel
+qty | quantity
+ie | that is
+curr | curriculum
+cfo | chief financial officer
+mph | master of public health
+cac | customer acquisition cost
+obgyn | obstetrics and gynecology
+seg tree | segment tree
+addr | address
+sdk | software development kit
+howdy | hello
+eng | engineering
+va | veterans affairs
+goat | greatest of all time
+flex | to show off
+hmu | hit me up
+phys | physics
+btech | bachelor of technology
+wks | weeks
+np | nurse practitioner
+approx | approximately
+trig | trigonometry
+admin | administration
+bio | biology
+tc | time complexity
+nlp | natural language processing
+conf | conference
+imho | in my humble opinion
+npv | net present value
+slo | service level objective
+bpharm | bachelor of pharmacy
+jd | juris doctor
+ps | postscript
+arch | architecture
+gen | general
+hs | heap sort
+ty | thank you
+bfs | breadth first search
+vol | volume
+hdmi | high definition multimedia interface
+ssr | server side rendering
+sol | solution
+stat mech | statistical mechanics
+reit | real estate investment trust
+bst | binary search tree
+un | united nations
+zip | zone improvement plan
+eg | for example
+gpa | grade point average
+gan | generative adversarial network
+dna | deoxyribonucleic acid
+maj | major
+avg | average
+sq | square
+univ | university
+temp | temporary
+supt | superintendent
+chem | chemistry
+dod | department of defense
+sec | securities and exchange commission
+aml | anti money laundering
+s3 | simple storage service
+eom | end of month
+https | hypertext transfer protocol secure
+sen | senior
+sop | standard operating procedure
+pp | pages
+slay | to do something impressively well
+diy | do it yourself
+sc | subcutaneous
+org | organization
+pmp | project management professional
+yrs | years
+tbh | to be honest
+lol | laughing out loud
+mlops | machine learning operations
+vc | venture capital
+vcs | version control system
+pr | pull request
+mktg | marketing
+cfa | chartered financial analyst
+vibe | feeling or atmosphere
+hq | headquarters
+eod | end of day
+ext | extension
+afk | away from keyboard
+csv | comma separated values
+lit | litigation
+dc | divide and conquer
+regex | regular expression
+dwt | don't waste time
+epa | environmental protection agency
+js | javascript
+fico | fair isaac corporation score
+pe | private equity
+asst | assistant
+dist | district
+inc | incorporated
+k8s | kubernetes
+w8 | wait
+sars | severe acute respiratory syndrome
+afaik | as far as i know
+algo | algorithm
+dl | deep learning
+assoc | association
+pos | point of sale
+p2p | peer to peer
+poc | proof of concept
+bcom | bachelor of commerce
+ooo | out of office
+eoq | end of quarter
+cnn | convolutional neural network
+json | javascript object notation
+tg | triglycerides
+nfs | not for sale
+init | initialism
+udp | user datagram protocol
+eoy | end of year
+lan | local area network
+wyd | what you doing
+scotus | supreme court of the united states
+bs | bachelor of science
+mri | magnetic resonance imaging
+imo | in my opinion
+tsh | thyroid stimulating hormone
+ofc | of course
+okr | objectives and key results
+bdd | behavior driven development
+omg | oh my god
+jv | joint venture
+mid | mediocre
+hdd | hard disk drive
+rep | representative
+ikr | i know right
+eol | end of line
+rnn | recurrent neural network
+pres | president
+based | having a strong opinion
+hr | human resources
+cto | chief technology officer
+rev | revenue
+cap | capital
+ianal | i am not a lawyer
+salty | bitter or upset
+gen ed | general education
+kyc | know your customer
+intl | international
+fb | facebook
+calc | calculus
+lmao | laughing my ass off
+std | standard
+yolo | you only live once
+o1 | constant time
+ttys | talk to you soon
+ig | instagram
+vip | very important person
+anal | analysis
+bioeng | bioengineering
+sr | senior
+wya | where you at
+wdym | what do you mean
+grad | graduate
+dept | department
+asap | as soon as possible
+bit | binary indexed tree
+aka | also known as
+plz | please
+bf | brute force
+b4 | before
+mttr | mean time to repair
+pol sci | political science
+ecb | european central bank
+sus | suspicious
+tcp | transmission control protocol
+jk | just kidding
+irl | in real life
+lowkey | somewhat / secretly
+cs | counting sort
+plt | platelet
+brb | be right back
+msg | message
+paas | platform as a service
+vpn | virtual private network
+coo | chief operating officer
+misc | miscellaneous
+omw | on my way
+fluid | fluid dynamics
+dg | devto
+env | environmental
+kiss | keep it simple stupid
+sub | subreddit
+est | estimated
+obs | observation
+pov | point of view
+atb | all the best
