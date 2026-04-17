@@ -119,7 +119,7 @@ make clean && make
 On startup, enter a username. Your profile is saved to `data/<username>.profile`.
 
 ```
-Enter username: suhani
+Enter username: name
 ```
 
 Start typing. Suggestions update after every character.
