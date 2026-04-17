@@ -3,39 +3,37 @@
 #include <unordered_set>
 #include <string>
 #include <ctime>
-using namespace std;
 
 namespace ranking {
 
 struct UserStats {
     int selectCount = 0;
-    time_t lastUsed = 0;
+    std::time_t lastUsed = 0;
 };
 
 class UserProfile {
 public:
-    explicit UserProfile(string userId);
+    explicit UserProfile(std::string userId);
 
-    const string& userId() const;
+    const std::string& userId() const;
 
     void recordSelection(int termId);
-
     UserStats getStats(int termId) const;
 
     void hide(int termId);
     void unhide(int termId);
-    bool isHidden(int termId) const;
+    bool is_hidden(int termId) const;
 
-    const unordered_map<int, UserStats>& allStats()  const;
-    const unordered_set<int>& hiddenSet() const;
+    const std::unordered_map<int, UserStats>& allStats()  const;
+    const std::unordered_set<int>& hiddenSet() const;
 
-    void loadStats(unordered_map<int, UserStats> stats,
-                   unordered_set<int> hidden);
+    void loadStats(std::unordered_map<int, UserStats> stats,
+                    std::unordered_set<int> hidden);
 
 private:
-    string userId_;
-    unordered_map<int, UserStats> stats_;
-    unordered_set<int> hidden_;
+    std::string userId_;
+    std::unordered_map<int, UserStats> stats_;
+    std::unordered_set<int> hidden_;
 };
 
-}
+} 

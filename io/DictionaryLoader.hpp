@@ -2,16 +2,15 @@
 #include "../core/TrieNode.hpp"
 #include <string>
 #include <vector>
-using namespace std;
 
 namespace io {
 
 class DictionaryLoader {
 public:
-    static vector<core::TermInfo> load(const string& path);
+    static std::vector<core::TermInfo> load(const std::string& path);
 
-    static void save(const string& path,
-                     const vector<core::TermInfo>& dict);
+    static void save(const std::string& path,
+                     const std::vector<core::TermInfo>& dict);
 };
 
-}
+} 

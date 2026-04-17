@@ -4,41 +4,40 @@
 #include <vector>
 #include <functional>
 #include <unordered_map>
-using namespace std;
 
 namespace ranking {
 
 struct RankWeights {
-    float globalFreq = 0.5f;
-    float userFreq   = 0.3f;
-    float recency    = 0.2f;
+    float global_freq = 0.5f;
+    float user_freq = 0.3f;
+    float recency = 0.2f;
 };
 
 class Ranker {
-public:\
-    Ranker(const vector<core::TermInfo>& dict,
+public:
+    Ranker(const std::vector<core::TermInfo>& dict,
            const UserProfile& profile,
            RankWeights weights = {});
 
-    float score(int termId) const;
+    float score(int term_id) const;
 
-    function<float(int)> scorer() const;
+    std::function<float(int)> scorer() const;
 
-    void rankInplace(vector<int>& termIds) const;
+    void rank_inplace(std::vector<int>& term_ids) const;
 
-    void invalidate(int termId);
+    void invalidate(int term_id);
 
 private:
-    const vector<core::TermInfo>& dict_;
+    const std::vector<core::TermInfo>& dict_;
     const UserProfile& profile_;
     RankWeights weights_;
 
-    mutable unordered_map<int, float> scoreCache_;
+    mutable std::unordered_map<int, float> score_cache_;
 
-    float computeScore(int termId) const;
-    float normGlobal(int freq) const;
-    float normUser(int userFreq) const;
-    float recencyScore(time_t lastUsed) const;
+    float compute_score(int term_id) const;
+    float norm_global (int freq) const;
+    float norm_user (int user_freq) const;
+    float recency_score(std::time_t last_used) const;
 };
 
 }
