@@ -41,6 +41,8 @@ std::unique_ptr<TrieNode> make_terminal_node(int term_id, float score) {
     return node;
 }
 
+
+
 template <typename Visitor>
 void visit_existing_path(TrieNode* root, const std::string& term, Visitor visitor) {
     TrieNode* current = root;
@@ -58,10 +60,16 @@ void visit_existing_path(TrieNode* root, const std::string& term, Visitor visito
         if (!edge.child) {
             break;
         }
+        // added this to check substring matches with the input
+        if(edge.label != term.substr(pos, edge.label.size())){
+            break;
+        }
 
         current = edge.child.get();
         visitor(*current);
-        pos += std::min(edge.label.size(), term.size() - pos);
+        // std::min(edge.label.size(), term.size() - pos)
+        
+        pos += edge.label.size();   
     }
 }
 
@@ -98,7 +106,7 @@ void split_edge_for_insertion(Edge& edge,
     edge.child = std::move(split_node);
 }
 
-}  // namespace
+}  
 
 RadixTrie::RadixTrie(std::vector<TermInfo>& dictionary)
     : root_(std::make_unique<TrieNode>()), dict_(dictionary) {}
@@ -137,7 +145,8 @@ void RadixTrie::insert(int term_id) {
         }
     }
 
-    if (pos == term.size() && current != root_.get() && !current->is_terminal) {
+    // current != root_.get() removed
+       if (pos == term.size() && !current->is_terminal) {
         current->is_terminal = true;
         current->term_id = term_id;
     }
@@ -203,10 +212,13 @@ std::vector<int> RadixTrie::search_prefix(const std::string& prefix,
         return term_score(dict_, id);
     };
 
-    std::vector<int> results;
-    results.reserve(TrieNode::K * 2);
-    collect_top_k(node, scorer, results, TrieNode::K);
-    return results;
+    // cache logic changed for miss cache
+    TrieNode* mutable_node = const_cast<TrieNode*>(node);
+    mutable_node->top_k_cache.clear();
+    mutable_node->top_k_cache.reserve(TrieNode::K * 2);
+    collect_top_k(node, scorer, mutable_node->top_k_cache, TrieNode::K);
+    mutable_node->cache_valid = true;
+    return mutable_node->top_k_cache;
 }
 
 void RadixTrie::collect_top_k(const TrieNode*                  node,
@@ -245,10 +257,20 @@ void RadixTrie::collect_top_k(const TrieNode*                  node,
             }
         }
 
+        const TrieNode* child_ptrs[kAlphabetSize];
+        int child_count = 0;
         for (int i = 0; i < kAlphabetSize; ++i) {
             if (current->children[i].child) {
-                stack.push_back(current->children[i].child.get());
+                child_ptrs[child_count++] = current->children[i].child.get();
             }
+        }
+        // Sort ascending so we push highest score last (top of stack).
+        std::sort(child_ptrs, child_ptrs + child_count,
+                  [](const TrieNode* a, const TrieNode* b) {
+                      return a->subtree_max_score < b->subtree_max_score;
+                  });
+        for (int i = 0; i < child_count; ++i) {
+            stack.push_back(child_ptrs[i]);
         }
     }
 
