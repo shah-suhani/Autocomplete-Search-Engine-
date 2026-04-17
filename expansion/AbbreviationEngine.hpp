@@ -1,26 +1,22 @@
 #pragma once
 #include <unordered_map>
+#include <vector>
 #include <string>
-using namespace std;
 
 namespace expansion {
-
+ 
 class AbbreviationEngine {
 public:
-    void add(const string& abbrev, const string& expansion);
+    void add(const std::string& abbrev, const std::string& expansion);
+    void load_from_file(const std::string& path);
+    void save_to_file (const std::string& path) const;
 
-    void loadFromFile(const string& path);
-
-    void saveToFile(const string& path) const;
-
-    bool has(const string& abbrev) const;
-
-    const string& expand(const string& abbrev) const;
+    bool has(const std::string& abbrev) const;
+    const std::string& expand(const std::string& abbrev) const; 
 
 private:
-    unordered_map<string, string> table_;
-
-    static const string kEmpty_;
+    std::unordered_map<std::string, std::string> table_;
+    static const std::string empty_;
 };
 
 } 

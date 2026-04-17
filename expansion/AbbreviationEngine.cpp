@@ -1,68 +1,56 @@
 #include "AbbreviationEngine.hpp"
 #include <fstream>
-#include <string>
-using namespace std;
+#include <sstream>
 
 namespace expansion {
 
-const string AbbreviationEngine::kEmpty_;
+const std::string AbbreviationEngine::empty_;
 
-static void trimInplace(string& s) {
-    const char* ws = " \t\r";
-    size_t first = s.find_first_not_of(ws);
-    if (first == string::npos) {
-        s.clear();
-        return;
-    }
-    size_t last = s.find_last_not_of(ws);
-    s = s.substr(first, last - first + 1);
-}
-
-void AbbreviationEngine::add(const string& abbrev,
-                              const string& expansion) {
+void AbbreviationEngine::add(const std::string& abbrev,
+                              const std::string& expansion) {
     table_[abbrev] = expansion;
 }
 
-void AbbreviationEngine::loadFromFile(const string& path) {
-    ifstream file(path);
-    if (!file.is_open())
-        return;
 
-    string line;
-    while (getline(file, line)) {
-        if (line.empty() || line[0] == '#')
-            continue;
+void AbbreviationEngine::loadFromFile(const std::string& path) {
+    std::ifstream f(path);
+    if (!f.is_open()) return;
 
-        auto sep = line.find('|');
-        if (sep == string::npos)
-            continue;
+    std::string line;
+    while (std::getline(f, line)) {
+        if (line.empty() || line[0] == '#') continue;
+        auto pipe = line.find('|');
+        if (pipe == std::string::npos) continue;
 
-        string abbrev    = line.substr(0, sep);
-        string expansion = line.substr(sep + 1);
+        std::string abbrev = line.substr(0, pipe);
+        std::string expansion = line.substr(pipe + 1);
 
-        trimInplace(abbrev);
-        trimInplace(expansion);
+        auto trim = [](std::string& s) {
+            size_t a = s.findFirstNotOf(" \t\r");
+            size_t b = s.findLastNotOf(" \t\r");
+            s = (a == std::string::npos) ? "" : s.substr(a, b - a + 1);
+        };
+        trim(abbrev);
+        trim(expansion);
 
         if (!abbrev.empty() && !expansion.empty())
             table_[abbrev] = expansion;
     }
 }
 
-void AbbreviationEngine::saveToFile(const string& path) const {
-    ofstream file(path);
-    for (const auto& [abbrev, expansion] : table_)
-        file << abbrev << " | " << expansion << '\n';
+void AbbreviationEngine::saveToFile(const std::string& path) const {
+    std::ofstream f(path);
+    for (const auto& [abbrev, exp] : table_)
+        f << abbrev << " | " << exp << '\n';
 }
 
-bool AbbreviationEngine::has(const string& abbrev) const {
+bool AbbreviationEngine::has(const std::string& abbrev) const {
     return table_.count(abbrev) > 0;
 }
 
-const string& AbbreviationEngine::expand(const string& abbrev) const {
+const std::string& AbbreviationEngine::expand(const std::string& abbrev) const {
     auto it = table_.find(abbrev);
-    if (it == table_.end())
-        return kEmpty_;
-    return it->second;
+    return (it == table_.end()) ? empty_ : it->second;
 }
 
 }

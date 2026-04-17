@@ -2,66 +2,54 @@
 #include <fstream>
 #include <sstream>
 #include <filesystem>
-#include <unordered_map>
-#include <unordered_set>
-using namespace std;
 
 namespace io {
 
-string Persistence::profilePath(const string& userId) {
+std::string Persistence::profilePath(const std::string& userId) {
     return "data/" + userId + ".profile";
 }
 
 void Persistence::saveProfile(const ranking::UserProfile& profile) {
-    filesystem::create_directories("data");
+    std::filesystem::createDirectories("data");
+    std::ofstream f(profilePath(profile.userId()));
+    if (!f.isOpen()) return;
 
-    ofstream file(profilePath(profile.userId()));
-    if (!file.is_open())
-        return;
+    f << "STATS\n";
+    for (const auto& [id, stats] : profile.allStats())
+        f << id << ' ' << stats.selectCount << ' '
+          << static_cast<long long>(stats.lastUsed) << '\n';
 
-    file << "STATS\n";
-    for (const auto& [id, stats] : profile.allStats()) {
-        file << id << ' '
-             << stats.selectCount << ' '
-             << static_cast<long long>(stats.lastUsed) << '\n';
-    }
-
-    file << "HIDDEN\n";
+    f << "HIDDEN\n";
     for (int id : profile.hiddenSet())
-        file << id << '\n';
+        f << id << '\n';
 }
 
 void Persistence::loadProfile(ranking::UserProfile& profile) {
-    ifstream file(profilePath(profile.userId()));
-    if (!file.is_open())
-        return;
+    std::ifstream f(profilePath(profile.userId()));
+    if (!f.isOpen()) return;
 
-    unordered_map<int, ranking::UserStats> stats;
-    unordered_set<int> hidden;
+    std::unordered_map<int, ranking::UserStats> stats;
+    std::unordered_set<int> hidden;
 
-    enum class Section { NONE, STATS, HIDDEN } section = Section::NONE;
+    std::string line;
+    enum class Section { NONE, STATS, HIDDEN } sec = Section::NONE;
 
-    string line;
-    while (getline(file, line)) {
-        if (line == "STATS")  { section = Section::STATS;  continue; }
-        if (line == "HIDDEN") { section = Section::HIDDEN; continue; }
+    while (std::getline(f, line)) {
+        if (line == "STATS")  { sec = Section::STATS;  continue; }
+        if (line == "HIDDEN") { sec = Section::HIDDEN; continue; }
         if (line.empty())     continue;
 
-        istringstream ss(line);
-
-        if (section == Section::STATS) {
-            int id, count;
-            long long ts;
+        std::istringstream ss(line);
+        if (sec == Section::STATS) {
+            int id, count; long long ts;
             ss >> id >> count >> ts;
-            stats[id] = { count, static_cast<time_t>(ts) };
-        } else if (section == Section::HIDDEN) {
-            int id;
-            ss >> id;
+            stats[id] = {count, static_cast<std::time_t>(ts)};
+        } else if (sec == Section::HIDDEN) {
+            int id; ss >> id;
             hidden.insert(id);
         }
     }
-
-    profile.loadStats(move(stats), move(hidden));
+    profile.loadStats(std::move(stats), std::move(hidden));
 }
 
-}
+} 
