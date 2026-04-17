@@ -9,7 +9,7 @@ std::string Persistence::profilePath(const std::string& userId) {
     return "data/" + userId + ".profile";
 }
 
-void Persistence::saveProfile(const ranking::UserProfile& profile) {
+void Persistence::save_profile(const ranking::UserProfile& profile) {
     std::filesystem::createDirectories("data");
     std::ofstream f(profilePath(profile.userId()));
     if (!f.isOpen()) return;
@@ -24,7 +24,7 @@ void Persistence::saveProfile(const ranking::UserProfile& profile) {
         f << id << '\n';
 }
 
-void Persistence::loadProfile(ranking::UserProfile& profile) {
+void Persistence::load_profile(ranking::UserProfile& profile) {
     std::ifstream f(profilePath(profile.userId()));
     if (!f.isOpen()) return;
 
