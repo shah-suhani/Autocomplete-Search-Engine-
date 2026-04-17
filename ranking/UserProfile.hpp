@@ -17,7 +17,7 @@ public:
 
     const std::string& userId() const;
 
-    void recordSelection(int termId);
+    void record_selection(int termId);
     UserStats getStats(int termId) const;
 
     void hide(int termId);
