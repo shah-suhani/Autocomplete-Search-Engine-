@@ -24,10 +24,10 @@ public:
     void unhide(int termId);
     bool is_hidden(int termId) const;
 
-    const std::unordered_map<int, UserStats>& allStats()  const;
-    const std::unordered_set<int>& hiddenSet() const;
+    const std::unordered_map<int, UserStats>& all_stats()  const;
+    const std::unordered_set<int>& hidden_set() const;
 
-    void loadStats(std::unordered_map<int, UserStats> stats,
+    void load_stats(std::unordered_map<int, UserStats> stats,
                     std::unordered_set<int> hidden);
 
 private:
