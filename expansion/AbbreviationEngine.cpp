@@ -11,8 +11,7 @@ void AbbreviationEngine::add(const std::string& abbrev,
     table_[abbrev] = expansion;
 }
 
-
-void AbbreviationEngine::loadFromFile(const std::string& path) {
+void AbbreviationEngine::load_from_file(const std::string& path) {
     std::ifstream f(path);
     if (!f.is_open()) return;
 
@@ -22,12 +21,12 @@ void AbbreviationEngine::loadFromFile(const std::string& path) {
         auto pipe = line.find('|');
         if (pipe == std::string::npos) continue;
 
-        std::string abbrev = line.substr(0, pipe);
+        std::string abbrev    = line.substr(0, pipe);
         std::string expansion = line.substr(pipe + 1);
 
         auto trim = [](std::string& s) {
-            size_t a = s.findFirstNotOf(" \t\r");
-            size_t b = s.findLastNotOf(" \t\r");
+            size_t a = s.find_first_not_of(" \t\r");
+            size_t b = s.find_last_not_of(" \t\r");
             s = (a == std::string::npos) ? "" : s.substr(a, b - a + 1);
         };
         trim(abbrev);
@@ -38,7 +37,7 @@ void AbbreviationEngine::loadFromFile(const std::string& path) {
     }
 }
 
-void AbbreviationEngine::saveToFile(const std::string& path) const {
+void AbbreviationEngine::save_to_file(const std::string& path) const {
     std::ofstream f(path);
     for (const auto& [abbrev, exp] : table_)
         f << abbrev << " | " << exp << '\n';

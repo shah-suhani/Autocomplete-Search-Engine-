@@ -5,28 +5,29 @@
 
 namespace io {
 
-std::string Persistence::profilePath(const std::string& userId) {
-    return "data/" + userId + ".profile";
+std::string Persistence::profile_path(const std::string& user_id) {
+    return "data/" + user_id + ".profile";
 }
 
+
 void Persistence::save_profile(const ranking::UserProfile& profile) {
-    std::filesystem::createDirectories("data");
-    std::ofstream f(profilePath(profile.userId()));
-    if (!f.isOpen()) return;
+    std::filesystem::create_directories("data");
+    std::ofstream f(profile_path(profile.user_id()));
+    if (!f.is_open()) return;
 
     f << "STATS\n";
-    for (const auto& [id, stats] : profile.allStats())
-        f << id << ' ' << stats.selectCount << ' '
-          << static_cast<long long>(stats.lastUsed) << '\n';
+    for (const auto& [id, stats] : profile.all_stats())
+        f << id << ' ' << stats.select_count << ' '
+          << static_cast<long long>(stats.last_used) << '\n';
 
     f << "HIDDEN\n";
-    for (int id : profile.hiddenSet())
+    for (int id : profile.hidden_set())
         f << id << '\n';
 }
 
 void Persistence::load_profile(ranking::UserProfile& profile) {
-    std::ifstream f(profilePath(profile.userId()));
-    if (!f.isOpen()) return;
+    std::ifstream f(profile_path(profile.user_id()));
+    if (!f.is_open()) return;
 
     std::unordered_map<int, ranking::UserStats> stats;
     std::unordered_set<int> hidden;
@@ -49,7 +50,7 @@ void Persistence::load_profile(ranking::UserProfile& profile) {
             hidden.insert(id);
         }
     }
-    profile.loadStats(std::move(stats), std::move(hidden));
+    profile.load_stats(std::move(stats), std::move(hidden));
 }
 
 } 
