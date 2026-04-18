@@ -9,15 +9,15 @@ namespace ranking {
 
 struct RankWeights {
     float global_freq = 0.5f;
-    float user_freq = 0.3f;
-    float recency = 0.2f;
+    float user_freq   = 0.3f;
+    float recency     = 0.2f;
 };
 
 class Ranker {
 public:
     Ranker(const std::vector<core::TermInfo>& dict,
-           const UserProfile& profile,
-           RankWeights weights = {});
+           const UserProfile&                 profile,
+           RankWeights                        weights = {});
 
     float score(int term_id) const;
 
@@ -29,14 +29,15 @@ public:
 
 private:
     const std::vector<core::TermInfo>& dict_;
-    const UserProfile& profile_;
-    RankWeights weights_;
+    const UserProfile&                 profile_;
+    RankWeights                        weights_;
 
+    
     mutable std::unordered_map<int, float> score_cache_;
 
     float compute_score(int term_id) const;
-    float norm_global (int freq) const;
-    float norm_user (int user_freq) const;
+    float norm_global  (int freq)              const;
+    float norm_user    (int user_freq)         const;
     float recency_score(std::time_t last_used) const;
 };
 
