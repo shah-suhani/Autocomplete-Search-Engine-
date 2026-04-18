@@ -7,33 +7,33 @@
 namespace ranking {
 
 struct UserStats {
-    int selectCount = 0;
-    std::time_t lastUsed = 0;
+    int         select_count = 0;
+    std::time_t last_used    = 0;
 };
 
 class UserProfile {
 public:
-    explicit UserProfile(std::string userId);
+    explicit UserProfile(std::string user_id);
 
-    const std::string& userId() const;
+    const std::string& user_id() const;
 
-    void record_selection(int termId);
-    UserStats getStats(int termId) const;
+    void      record_selection(int term_id);
+    UserStats get_stats(int term_id) const;
 
-    void hide(int termId);
-    void unhide(int termId);
-    bool is_hidden(int termId) const;
+    void hide  (int term_id);
+    void unhide(int term_id);
+    bool is_hidden(int term_id) const;
 
     const std::unordered_map<int, UserStats>& all_stats()  const;
-    const std::unordered_set<int>& hidden_set() const;
+    const std::unordered_set<int>&            hidden_set() const;
 
     void load_stats(std::unordered_map<int, UserStats> stats,
-                    std::unordered_set<int> hidden);
+                    std::unordered_set<int>            hidden);
 
 private:
-    std::string userId_;
-    std::unordered_map<int, UserStats> stats_;
-    std::unordered_set<int> hidden_;
+    std::string                        user_id_;
+    std::unordered_map<int, UserStats> stats_;   
+    std::unordered_set<int>            hidden_; 
 };
 
 } 
